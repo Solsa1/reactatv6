@@ -1,0 +1,32 @@
+{
+  "contatos": [
+    {
+      "name": "Cleiton rasta",
+      "status": "Olha a pedra",
+      "image": "https://static.wixstatic.com/media/368834_93a68c609ab64a2e81839d295d5ec7ab~mv2.jpg/v1/fill/w_1105,h_1600,al_c,q_85,enc_avif,quality_auto/368834_93a68c609ab64a2e81839d295d5ec7ab~mv2.jpg",
+      "time": "3m ago",
+      "id": "77d6"
+    },
+    {
+      "id": "937d",
+      "name": "steve",
+      "status": "i'm steve ",
+      "image": "https://recreio.com.br/media/_versions/2025/03/jack-black-steve-minecraft-capa_widelg.jpg",
+      "time": "yesterday"
+    },
+    {
+      "id": "716b",
+      "name": "Davi Brito",
+      "status": "Calma calabreso",
+      "image": "https://pbs.twimg.com/ext_tw_video_thumb/1885849765939732480/pu/img/s4V09PzKNfJB_H4X.jpg",
+      "time": "calma calabreso"
+    },
+    {
+      "id": "54f4",
+      "name": "TUNG TUNG TUNG SAHUR",
+      "status": "TUNG",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv4pcnx0hL-w9jrbIu_-36UCSQDLfdSEn8eg&s",
+      "time": "tung"
+    }
+  ]
+}
