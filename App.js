@@ -5,50 +5,47 @@ import { SafeAreaView } from 'react-native-web';
 import { Input, Icon , Button , ListItem, Avatar} from 'react-native-elements';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { Ionicons } from '@expo/vector-icons';
+import MinhaImagem from './images/181102.png';
 
 
-const list = [
+export function HomeScreen({ navigation, route}) {
+  const [contatos, setContatos] = useState([]);
+  const [isLoading, setLoading] = useState(false);
+  
+  
+   useEffect(() => {
+    axios.get('http://localhost:3000/contatos')
+      .then((response) => {
+        setContatos(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Erro ao buscar contatos:', error);
+        setLoading(false);
+      });
+  }, []);
+
+const images = [
   {
-    name: 'Claudia Alves',
-    status: 'Do more of what you love',
-    image: require('/images/Captura de tela 2025-04-16 181102.png'),
-    time: '3m ago'
+    image: require('./images/181102.png'), 
   },
   {
-    name: 'Dani Martinez',
-    status: 'Do your own thing',
-    image: require('/images/Captura de tela 2025-04-16 181037.png'),
-    time: '5m ago'
+    image: require('./images/Captura de tela 2025-04-16 181037.png'), 
   },
   {
-    name: 'Kimgberly Nguyen',
-    status: 'Kindness is beautiful',
-    image: require('/images/Captura de tela 2025-04-16 181011.png'),
-    time: '1h ago'
+    image: require('./images/Captura de tela 2025-04-16 181011.png'), 
   },
   {
-    name: 'Mariana Napolitani',
-    status: 'Live your purpose',
-    image: require('/images/Captura de tela 2025-04-16 181028.png'),
-    time: '2h ago'
+    image: require('./images/Captura de tela 2025-04-16 181028.png'),
   },
   {
-    name: 'Olivia Wilson',
-    status: 'You got this.',
-    image: require('/images/Captura de tela 2025-04-16 181117.png'),
-    time: '5h ago'
+   image: require('./images/Captura de tela 2025-04-16 181117.png'), 
   },
   {
-    name: 'Rachelle Beaudry',
-    status: "You're wonderful",
-    image: require('/images/Captura de tela 2025-04-16 181018.png'),
-    time: 'Yesterday'
+    image: require('./images/Captura de tela 2025-04-16 181018.png'),
   },
   {
-    name: 'Soo Jin Ae',
-    status: 'Keep it simple',
-    image: require('/images/Captura de tela 2025-04-16 181110.png'),
-    time: 'Yesterday'
+    image: require('./images/Captura de tela 2025-04-16 181110.png'),
   }
 ]
 
@@ -72,7 +69,7 @@ export default function HomeScreen() {
     </View> 
     <View style={styles.containerList}>
     {
-    list.map((item, i) => (
+    images.map((item, i) => (
       <ListItem style={{ marginTop: 30 }}key={i} bottomDivider>
         <Avatar
           rounded
